@@ -23,7 +23,7 @@ class App extends React.Component {
 
     this.setState({ userName: event.target.value })
 
-    if (event.target.value == '') {
+    if (event.target.value === '') {
       this.setState({ userName: '{}' })
       this.setState({ nameErrorCorrect: '' })
       this.setState({ nameError: '' })
@@ -51,7 +51,7 @@ class App extends React.Component {
             </h1>
           </div>
           <div>
-            <input onChange={this.onNameChange} placeholder = "Enter your name..."/>
+            <input onChange={this.onNameChange} placeholder="Enter your name..." />
             <span className="error-output">{this.state.nameError}</span>
             <span className="error-output-correct">{this.state.nameErrorCorrect}</span>
           </div>
